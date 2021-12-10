@@ -16,6 +16,7 @@ before_install:
   - gcloud config set compute/zone asia-south1-a
   - gcloud container clusters get-credentials ci-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u $DOCKER_USERNAME --password-stdin
+  - ls -ltra /home/travis/build/asikrasool/kubernetes-ci/
   - docker build -t asikrasool/react-test -f ./client/Deckerfile.dev .
 
 script:
