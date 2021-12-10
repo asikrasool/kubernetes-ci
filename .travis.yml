@@ -16,7 +16,7 @@ before_install:
   - gcloud config set compute/zone asia-south1-a
   - gcloud container clusters get-credentials ci-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u $DOCKER_USERNAME --password-stdin
-  - docker build -t asikrasool/react-test -f ./client/Deckerfile.dev ./client
+  - docker build -t asikrasool/react-test -f ./client/Deckerfile.dev .
 
 script:
   - docker run asikrasool/react-test npm test -- --coverage
