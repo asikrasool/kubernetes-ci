@@ -12,6 +12,6 @@ docker push asikrasool/multi-worker:latest
 docker push asikrasool/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/client-deployments server=asikrasool/multi-client:$SHA
-kubectl set image deployments/server-deployments server=asikrasool/multi-server:$SHA
-kubectl set image deployments/worker-deployments server=asikrasool/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=asikrasool/multi-client:$SHA
+kubectl set image deployments/server-deployment server=asikrasool/multi-server:$SHA
+kubectl set image deployments/worker-deployment worker=asikrasool/multi-worker:$SHA
