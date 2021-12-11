@@ -1,6 +1,6 @@
-docker build -f ./client/Dockerfile -f ./client -t asikrasool/multi-client:latest -t asikrasool/multi-client:$SHA 
-docker build -f ./server/Dockerfile -f ./server -t asikrasool/multi-server:latest -t asikrasool/multi-server:$SHA 
-docker build -f ./worker/Dockerfile -f ./worker -t asikrasool/multi-worker:latest -t asikrasool/multi-worker:$SHA 
+docker build -f ./client/Dockerfile -t asikrasool/multi-client:latest -t asikrasool/multi-client:$SHA ./client
+docker build -f ./server/Dockerfile -t asikrasool/multi-server:latest -t asikrasool/multi-server:$SHA ./server
+docker build -f ./worker/Dockerfile -t asikrasool/multi-worker:latest -t asikrasool/multi-worker:$SHA ./worker
 
 docker push asikrasool/multi-client:latest
 docker push asikrasool/multi-client:$SHA
