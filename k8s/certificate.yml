@@ -10,5 +10,5 @@ spec:
     kind: ClusterIssuer
   commonName: k8s.devops.coda.run
   dnsNames:
-    - k8s.devops.code.run
+    - k8s.devops.coda.run
     # - www.k8s.devops.code.run
