@@ -6,7 +6,7 @@ spec:
   secretName: k8s-devops-coda-run
   issuerRef:
     name: letsencrypt-prod
-    kind: ClusterIssuer
+    kind: Issuer
   commonName: k8s.devops.coda.run
   dnsNames:
     - k8s.devops.coda.run
